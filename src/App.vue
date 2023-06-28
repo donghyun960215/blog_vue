@@ -1,15 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<Herder/>
+<router-link to="/Home">Home</router-link>
+<router-link to="/List">List</router-link>
+<router-link to="/Details">Details</router-link>
+
+<router-view :blogs = "blogs"></router-view>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Herder from './components/Herder.vue'
+import blog from './assets/blog.js'
 export default {
   name: 'App',
+  data(){
+    return {
+      blogs : blog
+    }
+  },
   components: {
-    HelloWorld
+    Herder
   }
 }
 </script>
@@ -21,6 +31,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>

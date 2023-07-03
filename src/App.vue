@@ -4,7 +4,9 @@
 <router-link to="/List">List</router-link>
 <router-link to="/Details">Details</router-link>
 
-<router-view :blogs = "blogs"></router-view>
+<div class="mt-4">
+  <router-view :blogs = "blogs"></router-view>
+</div>
 
 </template>
 
